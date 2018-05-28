@@ -158,6 +158,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo博客搭建指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/28/hexo博客搭建指南/">hexo博客搭建指南</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/28/hexo博客搭建指南/" class="archive-article-date">
+  	<time datetime="2018-05-28T15:38:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><ul>
+<li><p>安装 <code>node</code> 和 <code>git</code></p>
+</li>
+<li><p>安装 <code>hexo</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建项目</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init kuckboy1994.github.io</span><br><span class="line">cd kuckboy1994.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>项目目录如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml     // 配置信息</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       // 模板文件夹</span><br><span class="line">├── source          // 资源 博客文章</span><br><span class="line">|   ├── _drafts     // 草稿</span><br><span class="line">|   └── _posts      // 正式发布的文章</span><br><span class="line">└── themes          // 主题</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/05/28/hexo博客搭建指南/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hexo,建站</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/28/hexo博客搭建指南/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-XSS攻击" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -896,85 +982,6 @@
 
 
   
-    <article id="post-给文本输入框增加下边框效果" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/14/给文本输入框增加下边框效果/">给文本输入框增加下边框效果</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/14/给文本输入框增加下边框效果/" class="archive-article-date">
-  	<time datetime="2017-11-14T03:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>文本翻译自 <a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a> 网站的 <a href="https://css-tricks.com/text-input-expanding-bottom-border/" target="_blank" rel="noopener">Text Input with Expanding Bottom Border</a> 一文。翻译有误，期待斧正。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Petr Gazarov在他的文章<code>Text input highlight, TripAdvisor style</code>中使用了一个漂亮的小设计。</p>
-<p><img src="https://github.com/kuckboy1994/Blog/blob/master/gif/bb_oqufjg.webp?raw=true" alt=""></p>
-<p>这是一个花招，在文本框下面实现这样的伸缩效果是不能实现的，所以Petr使用了span标签来同步内容，表现上想是它有一个边框一样。整个过程像是一个响应式的组件。<br>
-        
-          <a class="article-more-a" href="/2017/11/14/给文本输入框增加下边框效果/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/14/给文本输入框增加下边框效果/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1124,19 +1131,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">xss</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">优化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo,建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">xss</a>
               </li>
             
             <div class="clearfix"></div>
