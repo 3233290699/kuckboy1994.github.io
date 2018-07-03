@@ -5,19 +5,19 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="//blog.kuckboy1994.com">
+  <link rel="dns-prefetch" href="//kuckboy1994.com">
   <title>微信小程序解惑_收集用户的formid | kuckboy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="我们为什么要收集用户的 formid 呢？因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。 如何收集formid要获取用户id，首先我们要有一个 form 表单组件。 只有在提交表单的时候才会有 formid，而且 report-submit 属性为 true。代码如下 12345&amp;lt;!-- wxml --&amp;gt;&amp;lt;form bindsubmit=&quot;eventCollect">
 <meta name="keywords" content="微信小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序解惑_收集用户的formid">
-<meta property="og:url" content="//blog.kuckboy1994.com/2018/05/30/微信小程序解惑-收集用户的formid/index.html">
+<meta property="og:url" content="//kuckboy1994.com/2018/05/30/微信小程序解惑-收集用户的formid/index.html">
 <meta property="og:site_name" content="kuckboy的博客">
 <meta property="og:description" content="我们为什么要收集用户的 formid 呢？因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。 如何收集formid要获取用户id，首先我们要有一个 form 表单组件。 只有在提交表单的时候才会有 formid，而且 report-submit 属性为 true。代码如下 12345&amp;lt;!-- wxml --&amp;gt;&amp;lt;form bindsubmit=&quot;eventCollect">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/ec4d7780gy1frsobwh7psj20ai0cudhn.jpg">
-<meta property="og:updated_time" content="2018-05-29T16:48:23.223Z">
+<meta property="og:updated_time" content="2018-05-31T14:30:53.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序解惑_收集用户的formid">
 <meta name="twitter:description" content="我们为什么要收集用户的 formid 呢？因为我们可以用来 “干坏事”。比如给用户发送信息（服务通知）。 如何收集formid要获取用户id，首先我们要有一个 form 表单组件。 只有在提交表单的时候才会有 formid，而且 report-submit 属性为 true。代码如下 12345&amp;lt;!-- wxml --&amp;gt;&amp;lt;form bindsubmit=&quot;eventCollect">
@@ -36,8 +36,41 @@
     }
   </style>
   
+<!-- Google Analytics -->
+<!-- <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'true', 'auto');
+ga('send', 'pageview');
+
+</script> -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120241019-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120241019-1');
+</script>
+
+<!-- End Google Analytics -->
+
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?76a7a86c0f64caadb72a6500d5fc21c1";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -181,7 +214,8 @@
 <h2 id="如何收集formid"><a href="#如何收集formid" class="headerlink" title="如何收集formid"></a>如何收集formid</h2><p>要获取用户id，首先我们要有一个 <code>form</code> 表单组件。 只有在提交表单的时候才会有 <code>formid</code>，而且 <code>report-submit</code> 属性为 <code>true</code>。代码如下</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- wxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">bindsubmit</span>=<span class="string">"eventCollectFormId"</span> <span class="attr">report-submit</span>=<span class="string">"&#123;&#123;true&#125;&#125;"</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">form-type</span>=<span class="string">"submit"</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收集用户formId</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">eventCollectFormId (event) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.detail.formId)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。<br><a id="more"></a></p>
+<p>上面的代码是最少的代码了。并且是必须的，否则无法获取到 <code>formid</code>。</p>
+<a id="more"></a>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p><code>form</code> 组件可以设置在页面的最外层。内部放置多个 <code>button</code>。统一调用一个 <code>bindsubmit</code> 事件。</p>
 <p>要想尽可能多的获取 <code>formid</code> 又不想把所有的标签都使用 <code>button</code>，因为 <code>button</code> 修改样式的代缴是比较大的。可以使用悬浮的 <code>button</code> 。只要设置：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">opacity</span>: 0;</span><br></pre></td></tr></table></figure></p>
 <p>把原来的事件放置到 <code>button</code> 上即可。</p>
@@ -255,7 +289,7 @@
     </a>
   
   
-    <a href="/2018/05/29/微信小程序解惑-组件button详解/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/05/29/微信小程序解惑-组件button详解/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">微信小程序解惑-组件button详解</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -392,6 +426,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">畅言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
@@ -400,15 +446,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -428,15 +474,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">注释</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注释</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,10 +498,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">优化</a>
               </li>
              
@@ -464,15 +506,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">建站</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xss</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">建站</a>
               </li>
              
               <li class="article-tag-list-item">
