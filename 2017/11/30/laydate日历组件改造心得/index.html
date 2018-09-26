@@ -9,14 +9,14 @@
   <title>laydate日历组件改造心得 | kuckboy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
-<meta name="keywords" content="前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laydate日历组件改造心得">
 <meta property="og:url" content="//kuckboy1994.com/2017/11/30/laydate日历组件改造心得/index.html">
 <meta property="og:site_name" content="kuckboy的博客">
 <meta property="og:description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-08T06:11:15.190Z">
+<meta property="og:updated_time" content="2018-09-26T15:50:51.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laydate日历组件改造心得">
 <meta name="twitter:description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
@@ -256,6 +256,17 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -416,6 +427,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
@@ -428,11 +447,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -444,15 +459,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -488,15 +503,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">优化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,11 +523,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">xss</a>
+                <a href="javascript:void(0)" class="js-tag color4">XSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">反思</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//kuckboy1994.com">
-  <title>用网页实现移动端横向纵向列固定的表格 | kuckboy的博客</title>
+  <title>工作两年多思考 | kuckboy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最终效果：  当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。 分析简单分析来说，页面就是上面一个position:fixed;在顶部，下面的列表的最左边一列position-x:fixed（哈哈这个属性当然是不存在的啦）。 从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们">
-<meta name="keywords" content="CSS,HTML,移动端">
+  <meta name="description" content="最近在学习游泳🏊。 年初的三月份的时候换了工作，到现在九月份，也算在新公司干了半年了，发现到现在一直忙于业务，今天前端组长问我 “累不累”。那一刻真的感觉自己真的好累，好久都没有学习和写博客了。当初的梦想就是做个技术专家，结果在业务的道路上越走越远。。。 倒也不是说做业务不好，在增长组（我所在的组）学到了很多业务相关的知识，每次开会和聊天都会不断的拓展我的眼界和接受的范围。曾经一度我觉得是想去做">
+<meta name="keywords" content="感悟,反思">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用网页实现移动端横向纵向列固定的表格">
-<meta property="og:url" content="//kuckboy1994.com/2017/11/13/用网页实现移动端横向纵向列固定的表格/index.html">
+<meta property="og:title" content="工作两年多思考">
+<meta property="og:url" content="//kuckboy1994.com/2018/09/27/工作两年多思考/index.html">
 <meta property="og:site_name" content="kuckboy的博客">
-<meta property="og:description" content="最终效果：  当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。 分析简单分析来说，页面就是上面一个position:fixed;在顶部，下面的列表的最左边一列position-x:fixed（哈哈这个属性当然是不存在的啦）。 从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们">
+<meta property="og:description" content="最近在学习游泳🏊。 年初的三月份的时候换了工作，到现在九月份，也算在新公司干了半年了，发现到现在一直忙于业务，今天前端组长问我 “累不累”。那一刻真的感觉自己真的好累，好久都没有学习和写博客了。当初的梦想就是做个技术专家，结果在业务的道路上越走越远。。。 倒也不是说做业务不好，在增长组（我所在的组）学到了很多业务相关的知识，每次开会和聊天都会不断的拓展我的眼界和接受的范围。曾经一度我觉得是想去做">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif">
-<meta property="og:updated_time" content="2018-05-08T03:58:45.029Z">
+<meta property="og:updated_time" content="2018-09-26T16:16:26.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用网页实现移动端横向纵向列固定的表格">
-<meta name="twitter:description" content="最终效果：  当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。 分析简单分析来说，页面就是上面一个position:fixed;在顶部，下面的列表的最左边一列position-x:fixed（哈哈这个属性当然是不存在的啦）。 从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif">
+<meta name="twitter:title" content="工作两年多思考">
+<meta name="twitter:description" content="最近在学习游泳🏊。 年初的三月份的时候换了工作，到现在九月份，也算在新公司干了半年了，发现到现在一直忙于业务，今天前端组长问我 “累不累”。那一刻真的感觉自己真的好累，好久都没有学习和写博客了。当初的梦想就是做个技术专家，结果在业务的道路上越走越远。。。 倒也不是说做业务不好，在增长组（我所在的组）学到了很多业务相关的知识，每次开会和聊天都会不断的拓展我的眼界和接受的范围。曾经一度我觉得是想去做">
   
     <link rel="alternative" href="/atom.xml" title="kuckboy的博客" type="application/atom+xml">
   
@@ -190,40 +188,30 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-用网页实现移动端横向纵向列固定的表格" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-工作两年多思考" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      用网页实现移动端横向纵向列固定的表格
+      工作两年多思考
     </h1>
   
 
         
-        <a href="/2017/11/13/用网页实现移动端横向纵向列固定的表格/" class="archive-article-date">
-  	<time datetime="2017-11-13T03:54:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+        <a href="/2018/09/27/工作两年多思考/" class="archive-article-date">
+  	<time datetime="2018-09-26T16:16:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最终效果：</p>
-<p><img src="https://raw.githubusercontent.com/kuckboy1994/Blog/master/gif/table-fixed.gif" alt=""></p>
-<p>当页面横向滑动的时候，纵向上不能滚动。纵向滚动的时候，横向不能滚动。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>简单分析来说，页面就是上面一个<code>position:fixed;</code>在顶部，下面的列表的最左边一列<code>position-x:fixed</code>（哈哈这个属性当然是不存在的啦）。</p>
-<p>从图上的演示来看右侧的横向滚动的是联动的，但是效果其实是一致的。那我们就看底下的列表。既可以左右，又可以上下，而且还要锁定一个方向。其实每次滚动的时候我们都只能操作一个元素，不知道大家能不能理解，就好比我们页面上有一个区域a有滚动条，当前的页面很长，也有滚动条，鼠标在区域a上滚动的时候页面是不动的，只有当区域a滚到底的时候，页面才会继续滚动。所以利用这个特性，我们创造一个叠加的滚动区域，一个<code>overflow-y:auto;</code>，一个<code>overflow-x:auto</code>。一个只能纵向滚动，一个只能横向滚动。<br><a id="more"></a></p>
-<h2 id="html解释"><a href="#html解释" class="headerlink" title="html解释"></a>html解释</h2><p>html结构如下，左侧列表单独盛放（固定），右侧创造一个可以滚动的区域。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-body"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-body-left-fixed"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>涨停股份<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>888888<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>涨停股份<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>888888<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-body-right"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-tr"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>20170912<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>20171010<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>23.4%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>67.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>-19.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>103.90<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>9.12<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-tr"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>20170912<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>20171010<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>23.4%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>67.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>-19.9%<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>103.90<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"table-td"</span>&gt;</span>9.12<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="css解释"><a href="#css解释" class="headerlink" title="css解释"></a>css解释</h2><p><code>.table-body</code>设置为纵向滚动，<code>.table-body-right</code> 设置为横向滚动。<br><code>-webkit-overflow-scrolling: touch;</code> 是为了解决IOS滑动卡顿的问题。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.table-body</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">3.5rem</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">overflow-y</span>: auto;</span><br><span class="line">    <span class="attribute">overflow-x</span>: hidden;</span><br><span class="line">    <span class="attribute">-webkit-overflow-scrolling</span>: touch;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.table-body-right</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">25vw</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">overflow-x</span>: auto;</span><br><span class="line">    <span class="attribute">-webkit-overflow-scrolling</span>: touch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="联动，优化"><a href="#联动，优化" class="headerlink" title="联动，优化"></a>联动，优化</h2><p>上面的表头是简单版的列表，只有横向滚动。所以是非常easy的。</p>
-<p>还有一个是联动，就是上面滚动的时候，得出左侧滚动距离<code>scrollLeft</code>，但是只是单纯去设置<code>thead[0].scrollLeft = e.target.scrollLeft;</code>（表头的左侧滚动距离等于目列表的左侧滚动距离），其实是有问题的，比如在高速的操作下（what…你是机器人么）。会出现你手停下来了，出现对不齐的问题。解决的办法就是把当前的操作加入异步队列中，这样所有的操作都会被执行下来。</p>
-<p>以上就是最近写手机模板的收获。</p>
-<p><a href="https://github.com/kuckboy1994/Blog/blob/master/demo/table-fixed/index.html" target="_blank" rel="noopener">demo</a></p>
-<blockquote>
-<p>要是所有人都能理解你，你得平庸成什么样</p>
-</blockquote>
+        <p>最近在学习游泳🏊。</p>
+<p>年初的三月份的时候换了工作，到现在九月份，也算在新公司干了半年了，发现到现在一直忙于业务，今天前端组长问我 “累不累”。那一刻真的感觉自己真的好累，好久都没有学习和写博客了。当初的梦想就是做个技术专家，结果在业务的道路上越走越远。。。</p>
+<p>倒也不是说做业务不好，在增长组（我所在的组）学到了很多业务相关的知识，每次开会和聊天都会不断的拓展我的眼界和接受的范围。曾经一度我觉得是想去做运营做产品，认为我不适合写代码🤦‍。最近又开始冷静了起来… 我可能就是容易脑子一热吧。</p>
+<p>自从纪杰走了之后，我感觉我失去了获取知识的来源，也少了一个分担任务的人。还是感觉少了学习的时间。接下去还是好好学习吧。现在已经是第三个年的开始了。三年结束的时候还能收获什么呢？</p>
 
       
 
@@ -263,15 +251,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">反思</a>
         		</li>
       		
 		</ul>
@@ -290,18 +274,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/11/14/给文本输入框增加下边框效果/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          给文本输入框增加下边框效果
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/11/水平垂直居中/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">水平垂直居中</div>
+    <a href="/2018/09/26/微信小程序解惑-scrollview横向滚动问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信小程序解惑-scrollview横向滚动问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -331,7 +306,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="用网页实现移动端横向纵向列固定的表格" ></div> 
+  <div id="SOHUCS" sid="工作两年多思考" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

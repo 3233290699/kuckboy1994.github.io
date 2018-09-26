@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="kuckboy的博客">
 <meta property="og:description" content="我们开发的时常会遇到的横向滚动的需求。 方法一在网页中我们一般会设置123overflow-x: scroll;overflow-y: hidden;white-space: nowrap; 不设置 white-space: nowrap; 在小程序中总是竖直滚动。 但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入1-webkit-overflow-scrolling: to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-26T15:39:53.143Z">
+<meta property="og:updated_time" content="2018-09-26T15:46:00.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序解惑-scrollview横向滚动问题">
 <meta name="twitter:description" content="我们开发的时常会遇到的横向滚动的需求。 方法一在网页中我们一般会设置123overflow-x: scroll;overflow-y: hidden;white-space: nowrap; 不设置 white-space: nowrap; 在小程序中总是竖直滚动。 但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入1-webkit-overflow-scrolling: to">
@@ -213,6 +213,7 @@ var _hmt = _hmt || [];
 <p>不设置 <code>white-space: nowrap;</code> 在小程序中总是竖直滚动。</p>
 <p>但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</span><br></pre></td></tr></table></figure></p>
 <p>但是有个问题就是，容器的中的子元素设置为 <code>fixed</code> 的话，滚动的时候会被遮盖起来。一般不会这么操作。。。</p>
+<a id="more"></a>
 <p>全部代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">overflow-x: scroll;</span><br><span class="line">overflow-y: hidden;</span><br><span class="line">white-space: nowrap;</span><br><span class="line">-webkit-overflow-scrolling: touch;</span><br></pre></td></tr></table></figure></p>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>还有一种就是使用微信小程序提供的 <code>scroll-view</code> 组件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-x</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 滚动的内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>你为这样就可以了？图样图森破啊！</p>
@@ -283,6 +284,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/09/27/工作两年多思考/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          工作两年多思考
+        
+      </div>
+    </a>
   
   
     <a href="/2018/07/03/微信小程序解惑-视频滚动播放/" id="article-nav-older" class="article-nav-link-wrap">
@@ -422,6 +432,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
@@ -434,11 +452,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,15 +464,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,15 +508,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">优化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,11 +528,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">xss</a>
+                <a href="javascript:void(0)" class="js-tag color4">XSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">反思</a>
               </li>
             
             <div class="clearfix"></div>
