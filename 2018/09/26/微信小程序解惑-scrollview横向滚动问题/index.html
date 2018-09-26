@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//kuckboy1994.com">
-  <title>laydate日历组件改造心得 | kuckboy的博客</title>
+  <title>微信小程序解惑-scrollview横向滚动问题 | kuckboy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
-<meta name="keywords" content="前端,node,全栈,多肉,绿植,kuckboy,kuckboy1994,技术,生活,js,jquery,javascript,html5,css3,开发者,程序员,coder,开源,it,programmer">
+  <meta name="description" content="我们开发的时常会遇到的横向滚动的需求。 方法一在网页中我们一般会设置123overflow-x: scroll;overflow-y: hidden;white-space: nowrap; 不设置 white-space: nowrap; 在小程序中总是竖直滚动。 但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入1-webkit-overflow-scrolling: to">
+<meta name="keywords" content="微信小程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="laydate日历组件改造心得">
-<meta property="og:url" content="//kuckboy1994.com/2017/11/30/laydate日历组件改造心得/index.html">
+<meta property="og:title" content="微信小程序解惑-scrollview横向滚动问题">
+<meta property="og:url" content="//kuckboy1994.com/2018/09/26/微信小程序解惑-scrollview横向滚动问题/index.html">
 <meta property="og:site_name" content="kuckboy的博客">
-<meta property="og:description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
+<meta property="og:description" content="我们开发的时常会遇到的横向滚动的需求。 方法一在网页中我们一般会设置123overflow-x: scroll;overflow-y: hidden;white-space: nowrap; 不设置 white-space: nowrap; 在小程序中总是竖直滚动。 但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入1-webkit-overflow-scrolling: to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-08T06:11:15.190Z">
+<meta property="og:updated_time" content="2018-09-26T15:39:53.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laydate日历组件改造心得">
-<meta name="twitter:description" content="最近两天对layDate 5.0.85版本进行了改造。来谈一下心得。 修改内容 修复了当min的日比max的日大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。 增加了过滤日期的功能（正选和反选） 增加了选择最近的功能 增加了暗黑主题想要体验的小伙伴，点击传送门  体会当时豆饼(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而">
+<meta name="twitter:title" content="微信小程序解惑-scrollview横向滚动问题">
+<meta name="twitter:description" content="我们开发的时常会遇到的横向滚动的需求。 方法一在网页中我们一般会设置123overflow-x: scroll;overflow-y: hidden;white-space: nowrap; 不设置 white-space: nowrap; 在小程序中总是竖直滚动。 但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入1-webkit-overflow-scrolling: to">
   
     <link rel="alternative" href="/atom.xml" title="kuckboy的博客" type="application/atom+xml">
   
@@ -188,40 +188,44 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-laydate日历组件改造心得" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-微信小程序解惑-scrollview横向滚动问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      laydate日历组件改造心得
+      微信小程序解惑-scrollview横向滚动问题
     </h1>
   
 
         
-        <a href="/2017/11/30/laydate日历组件改造心得/" class="archive-article-date">
-  	<time datetime="2017-11-30T06:07:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
+        <a href="/2018/09/26/微信小程序解惑-scrollview横向滚动问题/" class="archive-article-date">
+  	<time datetime="2018-09-26T15:39:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近两天对<code>layDate 5.0.85</code>版本进行了改造。来谈一下心得。</p>
-<h2 id="修改内容"><a href="#修改内容" class="headerlink" title="修改内容"></a>修改内容</h2><ol>
-<li>修复了当<code>min</code>的<code>日</code>比<code>max</code>的<code>日</code>大的时候。在切换到月份显示界面的时候，最小值的月份显示为不可点。</li>
-<li>增加了过滤日期的功能（正选和反选）</li>
-<li>增加了选择最近的功能</li>
-<li>增加了暗黑主题<br>想要体验的小伙伴，点击<a href="https://github.com/kuckboy1994/laydate" target="_blank" rel="noopener">传送门</a></li>
-</ol>
-<h2 id="体会"><a href="#体会" class="headerlink" title="体会"></a>体会</h2><p>当时<code>豆饼</code>(我的同事小伙伴)推荐了我使用layDate日历组件，我看了一下感觉样式上和功能上基本都满足我们工作所需，而且是开源的（这就方便我们个性化的定制）。号称是layui独立维护的三大组件之一，而且还是最近重写的，瞬间感觉就被他征服了。立马上手！<br><a id="more"></a><br>当时还是有点心虚的，毕竟还是第一次改源码，风险还是存在的。发现写法和我以前写原生js插件的差不多（复杂程度还是差很多的），还能看得懂些。但是有些方法就有点不知为何这么写了，但主要还是完成我的任务。读代码的时候发现他封装了很多类似jQuery的方法，如：<br>extend、each、addClass、removeClass、hasClass、attr、find、html、val、append、remove、on、off。<br>还有一些个性化的方法，如：<br>elem(创建元素)、elem(创建元素)、addStr(追加字符)、digit(数字前置补零)。<br>这些方法其实在平常的工作中也是很常用的，但jQuery已经帮我们做好了。但是如果在现在化的工作流中比如(react、vue)中我们就不会去选择使用jQuery了，可能就需要我们自己封装了。到时候可以回头看看。</p>
-<p>组件的config和方法都设置在原型上，一个是保证方法始终可用（上下文方便传递），另一个是方便链式调用。</p>
-<p>laydate通过window对象向外暴露。</p>
-<p>支持amd规范。</p>
-<p>同时试了一下修改主题，主题的设置感觉不是很方便，如果我上传到资源服务器，要是要增加样式的话，就得替换文件，后期考虑增加配置样式地址。</p>
-<p>过几天有空了整理一下，准备给master发个pull request。</p>
-<p>拒绝97，拥抱开源！ 2333</p>
+        <p>我们开发的时常会遇到的横向滚动的需求。</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>在网页中我们一般会设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">scroll</span>;</span><br><span class="line"><span class="selector-tag">overflow-y</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br></pre></td></tr></table></figure></p>
+<p>不设置 <code>white-space: nowrap;</code> 在小程序中总是竖直滚动。</p>
+<p>但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</span><br></pre></td></tr></table></figure></p>
+<p>但是有个问题就是，容器的中的子元素设置为 <code>fixed</code> 的话，滚动的时候会被遮盖起来。一般不会这么操作。。。</p>
+<p>全部代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">overflow-x: scroll;</span><br><span class="line">overflow-y: hidden;</span><br><span class="line">white-space: nowrap;</span><br><span class="line">-webkit-overflow-scrolling: touch;</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>还有一种就是使用微信小程序提供的 <code>scroll-view</code> 组件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-x</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 滚动的内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>你为这样就可以了？图样图森破啊！</p>
+<p>还要设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这样你就可以滚动了，但是你开发的时候会发现。为啥滚动的文本不能换行呢？</p>
+<p><code>white-space</code> 属性是会被继承的。 所以你要在换行的子元素上设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">normal</span> !<span class="selector-tag">important</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在真机上测试过的同学会发现，安卓和ios的效果有不一样的地方，那就是滚动条。安卓有滚动条，ios没有！！！</p>
+<p>解决的办法是设置 <code>scrollbar</code> ：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">color</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样滚动条全部都消失了。安卓和ios保持一致了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.cnblogs.com/fiy-noob/p/8624898.html" target="_blank" rel="noopener">微信小程序ios端overflow:auto滚动卡顿</a></li>
+<li><a href="https://blog.csdn.net/qq_32067045/article/details/79958540" target="_blank" rel="noopener">微信小程序 scroll-view的滚动条设置</a></li>
+</ul>
 
       
 
@@ -256,6 +260,17 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -269,18 +284,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/12/03/vi-vim/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vi-vim
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/22/讨论一下css命名/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">讨论一下css命名</div>
+    <a href="/2018/07/03/微信小程序解惑-视频滚动播放/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信小程序解惑-视频滚动播放</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -310,7 +316,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="laydate日历组件改造心得" ></div> 
+  <div id="SOHUCS" sid="微信小程序解惑-scrollview横向滚动问题" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

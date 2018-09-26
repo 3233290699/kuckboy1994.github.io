@@ -189,6 +189,97 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-微信小程序解惑-scrollview横向滚动问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/26/微信小程序解惑-scrollview横向滚动问题/">微信小程序解惑-scrollview横向滚动问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/26/微信小程序解惑-scrollview横向滚动问题/" class="archive-article-date">
+  	<time datetime="2018-09-26T15:39:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们开发的时常会遇到的横向滚动的需求。</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>在网页中我们一般会设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow-x</span>: <span class="selector-tag">scroll</span>;</span><br><span class="line"><span class="selector-tag">overflow-y</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br></pre></td></tr></table></figure></p>
+<p>不设置 <code>white-space: nowrap;</code> 在小程序中总是竖直滚动。</p>
+<p>但是在微信小程序真机中体验的时候会发现，滚动不是很顺畅，你可能需要加入<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</span><br></pre></td></tr></table></figure></p>
+<p>但是有个问题就是，容器的中的子元素设置为 <code>fixed</code> 的话，滚动的时候会被遮盖起来。一般不会这么操作。。。</p>
+<p>全部代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">overflow-x: scroll;</span><br><span class="line">overflow-y: hidden;</span><br><span class="line">white-space: nowrap;</span><br><span class="line">-webkit-overflow-scrolling: touch;</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>还有一种就是使用微信小程序提供的 <code>scroll-view</code> 组件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-x</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 滚动的内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>你为这样就可以了？图样图森破啊！</p>
+<p>还要设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这样你就可以滚动了，但是你开发的时候会发现。为啥滚动的文本不能换行呢？</p>
+<p><code>white-space</code> 属性是会被继承的。 所以你要在换行的子元素上设置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">normal</span> !<span class="selector-tag">important</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在真机上测试过的同学会发现，安卓和ios的效果有不一样的地方，那就是滚动条。安卓有滚动条，ios没有！！！</p>
+<p>解决的办法是设置 <code>scrollbar</code> ：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">color</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样滚动条全部都消失了。安卓和ios保持一致了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.cnblogs.com/fiy-noob/p/8624898.html" target="_blank" rel="noopener">微信小程序ios端overflow:auto滚动卡顿</a></li>
+<li><a href="https://blog.csdn.net/qq_32067045/article/details/79958540" target="_blank" rel="noopener">微信小程序 scroll-view的滚动条设置</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/26/微信小程序解惑-scrollview横向滚动问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-微信小程序解惑-视频滚动播放" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -935,94 +1026,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="vuejs-项目小结（一）" class="article article-type-vuejs  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/20/项目小结（一）/">项目小结（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/20/项目小结（一）/" class="archive-article-date">
-  	<time datetime="2017-12-20T06:17:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>许久没有写vue了，前几天有人问我问题，概念都有些理不清楚了。。<br>项目快完成，总结一下。从最基础的开始，重现我遇到的问题和一些细节问题。</p>
-<h2 id="项目效果图"><a href="#项目效果图" class="headerlink" title="项目效果图"></a>项目效果图</h2><p><img src="https://github.com/kuckboy1994/Blog/raw/master/images/vuejs-summary-1/overlap-1.png" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/12/20/项目小结（一）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vuex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svg</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/20/项目小结（一）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1137,15 +1143,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1201,15 +1207,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">xss</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">建站</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">xss</a>
               </li>
              
               <li class="article-tag-list-item">
